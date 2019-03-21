@@ -6,6 +6,10 @@ This project is intended to serve as a barebones starter kit for exploring Graph
 
 The easiest way to use this repo is to have [Docker](https://www.docker.com) installed and configured on your development machine.
 
+Before starting this project, you will need to update the following `sample.env` file(s) with your own settings and save them as `.env` in their respective directories:
+
+- `server/sample.env` -> `server/.env`
+
 Once this is complete, you can spin up the project by running:
 
 ```sh
@@ -14,9 +18,9 @@ $ npm start
 
 This will create the following Docker containers:
 
-+ `graphql-app` - A simple [React](https://reactjs.org) web application to work with our GraphQL API
-+ `graphql-server` - The [GraphQL](https://graphql.org) server powered by [Express](https://expressjs.com)
-+ `graphql-mongodb` - A [MongoDB](https://www.mongodb.com) server
+- `graphql-app` - A simple [React](https://reactjs.org) web application to work with our GraphQL API
+- `graphql-server` - The [GraphQL](https://graphql.org) server powered by [Express](https://expressjs.com)
+- `graphql-mongodb` - A [MongoDB](https://www.mongodb.com) server
 
 Assuming you are using the default configuration, you should be able to explore the [GraphQL playground](http://localhost:4000/graphql) by visiting [http://localhost:4000/graphql](http://localhost:4000/graphql) to verify the GraphQL API is running.
 
