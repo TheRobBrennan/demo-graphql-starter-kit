@@ -1,20 +1,19 @@
 version: '3'
 
 services:
-  # TODO: We will be bringing in new client and server code. This is for reference only.
-  # 'graphql-app':
-  #   build:
-  #     context: ./app
-  #     dockerfile: ./Dockerfile.dev
-  #   container_name: 'graphql-app'
-  #   command: ./node_modules/.bin/react-scripts start
-  #   ports:
-  #     - "3000:3000"
-  #   # Automatically hot reload code changes in the Docker container
-  #   volumes:
-  #     - ./app:/usr/src
-  #   depends_on:
-  #     - graphql-server
+  'graphql-app':
+    build:
+      context: ./app
+      dockerfile: ./Dockerfile
+    container_name: 'graphql-app'
+    command: ./node_modules/.bin/react-scripts start
+    ports:
+      - "3000:3000"
+    # Automatically hot reload code changes in the Docker container
+    volumes:
+      - ./app/src:/usr/src/src
+    depends_on:
+      - graphql-server
 
   'graphql-server':
     build:
