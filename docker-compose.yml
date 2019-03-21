@@ -16,18 +16,18 @@ services:
   #   depends_on:
   #     - graphql-server
 
-  # 'graphql-server':
-  #   build:
-  #     context: ./server
-  #     dockerfile: ./Dockerfile.dev
-  #   container_name: 'graphql-server'
-  #   # This service will not start until either the mongodb service is available OR thirty seconds have elapsed
-  #   command: sh -c './scripts/wait-for.sh --timeout=30 mongodb:27017 && ./node_modules/.bin/nodemon -e js,json,graphql'
-  #   ports:
-  #     - "4000:4000"
-  #     - "9229:9229"
-  #   depends_on:
-  #     - mongodb
+  'graphql-server':
+    build:
+      context: ./server
+      dockerfile: ./Dockerfile
+    container_name: 'graphql-server'
+    # This service will not start until either the mongodb service is available OR thirty seconds have elapsed
+    command: sh -c './scripts/wait-for.sh --timeout=30 mongodb:27017 && npx nodemon -e js,json,graphql'
+    ports:
+      - "4000:4000"
+      - "9229:9229"
+    depends_on:
+      - mongodb
 
   mongodb:
     image: mongo
