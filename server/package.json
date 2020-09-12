@@ -19,7 +19,7 @@
     "graphql-playground-middleware-express": "1.7.1",
     "graphql-validation-complexity": "0.2.3",
     "mongodb": "3.1.13",
-    "node-fetch": "2.1.2",
+    "node-fetch": "2.6.1",
     "nodemon": "^1.18.7"
   }
 }
